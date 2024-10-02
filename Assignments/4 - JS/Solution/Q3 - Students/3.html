@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Ranking System</title>
+  <link rel="stylesheet" href="3.css">
+  <script src="3.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <h1>Student Ranking System</h1>
+    <section class="box" id="sec-coeff">
+      <h2>GPA Coefficients</h2>
+      <ul>
+        <li>
+          <p><span id="coeff-mathematics">N</span> &times; Mathematics</p>
+        </li>
+        <li>
+          <p><span id="coeff-physics">N</span> &times; Physics</p>
+        </li>
+        <li>
+          <p><span id="coeff-chemistry">N</span> &times; Chemistry</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="box" id="sec-add">
+      <h2>Add Student</h2>
+      <form id="add-form" name="add-form">
+        <div id="add-grid">
+          <div>
+            <label>
+              Name:<br>
+              <input type="text" name="name" required>
+            </label><br>
+            <label>
+              Physics:<br>
+              <input type="number" name="physics" value="1" min="1" max="20" step="0.1" required>
+            </label><br>
+          </div>
+          <div>
+            <label>
+              Mathematics:<br>
+              <input type="number" name="mathematics" value="1" min="1" max="20" step="0.1" required>
+            </label><br>
+            <label>
+              Chemistry:
+              <input type="number" name="chemistry" value="1" min="1" max="20" step="0.1" required>
+            </label><br>
+          </div>
+        </div>
+        <input type="submit" value="Add Student">
+      </form>
+      <button id="btn-finish">Finish (<span id="count">0</span> students)</button>
+    </section>
+
+    <section id="sec-results">
+      <h2>Results</h2>
+      <h2>The top rank is: <span id="winner">NAME</span></h2>
+      <ol id="result-list"></ol>
+      <button id="btn-reset">Reset</button>
+    </section>
+  </main>
+</body>
+
+</html>

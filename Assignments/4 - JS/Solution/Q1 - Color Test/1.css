@@ -1,0 +1,78 @@
+:root {
+    --selected-color: black;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #282828;
+    color: white;
+}
+
+main {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "input showcase";
+    place-items: center;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1::first-letter {
+    font-size: 2.8rem;
+}
+
+h1::selection {
+    color: var(--selected-color);
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 10px 0 black;
+}
+
+#input-panel {
+    grid-area: input;
+}
+
+#color-showcase {
+    grid-area: showcase;
+
+    width: 200px;
+    height: 200px;
+    background-color: var(--selected-color);
+    border-radius: 4px;
+    border: 2px solid white;
+    box-shadow: 0 0 10px 0 black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#invalid-text {
+    display: none;
+    color: red;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 620px) {
+    main {
+        grid-template-areas:
+            "input"
+            "showcase";
+    }
+}

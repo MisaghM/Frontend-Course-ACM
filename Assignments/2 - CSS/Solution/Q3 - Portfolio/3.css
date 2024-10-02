@@ -1,0 +1,356 @@
+:root {
+    --header-height: 80px;
+    --header-padding: 60px;
+    --site-width: 900px;
+    --article-padding: 100px;
+    --title-rem: 5rem;
+    --theme-bg-dark: #242424;
+    --theme-bg-darker: #141414;
+    --theme-red: hsl(350, 92%, 50%);
+    --theme-red-light: hsl(350, 92%, 94%)
+}
+
+html {
+    background-color: var(--theme-bg-darker);
+    color: white;
+}
+
+.red-text {
+    color: var(--theme-red);
+}
+
+.red-light-text {
+    color: var(--theme-red-light);
+}
+
+.red-btn {
+    font-size: 1.1rem;
+    color: white;
+    background-color: var(--theme-red);
+    box-shadow: 0 0 2px 0 rgba(20, 20, 20, 0.2);
+    padding: 10px 25px;
+    border-radius: 20px;
+    transition: transform 0.2s;
+}
+
+.red-btn:hover {
+    transform: scale(110%);
+}
+
+.red-btn2 {
+    font-size: 1.1rem;
+    color: white;
+    background-color: var(--theme-red);
+    box-shadow: 0 0 2px 0 rgba(20, 20, 20, 0.2);
+    padding: 10px 25px;
+    border-radius: 20px;
+    transition: background-color 0.2s;
+}
+
+.red-btn2:hover {
+    transform: scale(100%);
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px var(--theme-red);
+}
+
+.fixed-width-container {
+    width: var(--site-width);
+    margin: 0 auto;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -- HEADER -- */
+
+header {
+    position: absolute;
+    width: 100%;
+    height: var(--header-height);
+    background-color: transparent;
+    z-index: 1;
+}
+
+#hdr-container {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--header-padding);
+}
+
+#logo-text {
+    font-weight: bold;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+}
+
+#nav-mobile {
+    display: none;
+}
+
+#nav-mobile button {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#nav-mobile button i {
+    transition: transform 0.2s;
+}
+
+#nav-mobile button:hover i {
+    transform: rotate(180deg);
+}
+
+#nav ul.ul-flex {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+#nav .nav-btn {
+    transition: color 0.2s;
+}
+
+#nav .nav-btn:hover,
+#nav .nav-btn.active {
+    color: var(--theme-red);
+}
+
+/* -- FRONT PAGE -- */
+
+#front-page {
+    padding: var(--header-height) var(--header-padding) calc(var(--header-height) / 2);
+    height: 100vh;
+    background-image:
+        linear-gradient(to bottom left, rgba(240, 240, 240, 0.2), rgba(20, 20, 20, 0.2)),
+        url('bg.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 350px;
+}
+
+.email-container {
+    display: flex;
+    position: relative;
+    max-width: 500px;
+}
+
+#email-input {
+    width: 100%;
+    flex: 1;
+    color: black;
+    background-color: rgb(250, 250, 250);
+    padding: 14px 20px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 0 5px 2px var(--theme-red);
+}
+
+#submit-email {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+
+#front-page .h2-above {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--theme-red-light);
+}
+
+#front-page h1 {
+    font-weight: normal;
+    font-size: 4rem;
+}
+
+#front-page .h2-below {
+    margin: 20px 0 30px;
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+
+/* -- ABOUT ME -- */
+
+#about-me {
+    background-color: var(--theme-bg-dark);
+    padding: var(--article-padding) 0;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 20px;
+}
+
+.two-col-left {
+    max-height: 500px;
+}
+
+#about-me img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+}
+
+.two-col-right {
+    padding: 20px 0px 0;
+}
+
+#about-me h2 {
+    font-size: var(--title-rem);
+    font-weight: lighter;
+}
+
+#about-me h3 {
+    font-size: 1.2rem;
+}
+
+#about-me p {
+    margin: 30px 0;
+    text-align: justify;
+}
+
+/* -- OUR SERVICES -- */
+
+#our-services {
+    background-color: var(--theme-bg-darker);
+    padding: var(--article-padding) 0;
+    text-align: center;
+}
+
+.three-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#our-services h2 {
+    font-size: var(--title-rem);
+    font-weight: lighter;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+#our-services h3 {
+    font-size: 1.6rem;
+}
+
+#our-services p {
+    font-size: 0.9rem;
+}
+
+#our-services section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 30px 50px;
+    background-color: var(--theme-bg-dark);
+    border-radius: 15px;
+}
+
+#our-services button {
+    margin-top: 10px;
+}
+
+/* -- HIRE ME -- */
+
+#hire-me {
+    background-color: var(--theme-bg-dark);
+    padding: var(--article-padding) 0;
+    text-align: center;
+}
+
+#hire-me h2 {
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* -- FOOTER -- */
+
+footer {
+    background-color: var(--theme-bg-darker);
+    padding: 60px 8px 30px;
+    text-align: center;
+}
+
+#social-bar {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+#social-bar .fa {
+    padding: 12px;
+    border-radius: 50%;
+    color: white;
+    background: var(--theme-red);
+    transition: transform 0.1s;
+}
+
+#social-bar .fa:hover {
+    transform: scale(110%);
+}
+
+/* -- RESPONSIVE -- */
+
+@media screen and (max-width: 900px) {
+    :root {
+        --site-width: 760px;
+    }
+
+    #nav ul.ul-flex {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    :root {
+        --site-width: 680px;
+        --article-padding: 60px;
+    }
+
+    #nav {
+        display: none;
+    }
+
+    #nav-mobile {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    :root {
+        --site-width: 400px;
+    }
+
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+
+    .three-col {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    :root {
+        --site-width: 320px;
+        --header-padding: 20px;
+        --title-rem: 4rem;
+    }
+}

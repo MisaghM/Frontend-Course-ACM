@@ -1,0 +1,7 @@
+.alert {
+    background-color: var(--miz-red-light);
+}
+
+.logout-button {
+    background-color: var(--miz-red);
+}

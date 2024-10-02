@@ -1,0 +1,91 @@
+html {
+    color: white;
+}
+
+body {
+    background: linear-gradient(to bottom right, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 500% 500%;
+    animation: bg-gradient 6s ease 0s infinite alternate;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+@keyframes bg-gradient {
+    from {
+        background-position: 0% 50%;
+    }
+
+    to {
+        background-position: 100% 50%;
+    }
+}
+
+h1,
+h2,
+button {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin: 1rem 0;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+
+.line-around {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.line-around::before,
+.line-around::after {
+    content: "";
+    width: 50px;
+    border-bottom: 2px solid;
+}
+
+#btn-section {
+    display: flex;
+}
+
+#btn-section button {
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+
+    transition: all 0.1s;
+    transition-property: color, background-color;
+}
+
+#btn-section button:hover {
+    color: black;
+    background-color: white;
+}
+
+#btn-section button:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#btn-section button:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+}

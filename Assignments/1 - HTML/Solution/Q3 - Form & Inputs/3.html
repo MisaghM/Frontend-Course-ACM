@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظرسنجی رستوران</title>
+    <meta name="description" content="فرم نظرسنجی برای رستوران">
+    <link rel="stylesheet" href="3.css">
+</head>
+
+<body>
+    <main>
+        <section id="form-section">
+            <h2 class="text-center">نظرسنجی</h2>
+            <form name="survey" action="https://theuselessweb.site/ducksarethebest.com/" method="get">
+                <label>
+                    نام:
+                    <input type="text" name="firstname" required>
+                </label><br>
+                <label>
+                    نام خانوادگی:
+                    <input type="text" name="lastname" required>
+                </label><br>
+                <label>
+                    تاریخ تولد:
+                    <input type="date" name="dateofbirth" required>
+                </label><br>
+                <label>
+                    شماره تماس:
+                    <input type="tel" name="phonenumber" pattern="0[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="0912-123-1234" required>
+                </label><br>
+                <label>
+                    ایمیل:
+                    <input type="email" name="email" required>
+                </label><br>
+                <label>
+                    لینک سایت:
+                    <input type="url" name="website">
+                </label><br>
+                <div>
+                    <h3>از بین غذاهای زیر کدوم رو ترجیح میدید؟</h3>
+                    <label>
+                        <input type="radio" name="pref-food" value="pizza" required>
+                        پیتزا
+                    </label>
+                    <label>
+                        <input type="radio" name="pref-food" value="kebab">
+                        کباب
+                    </label>
+                    <label>
+                        <input type="radio" name="pref-food" value="ghormeh-sabzi">
+                        قرمه سبزی
+                    </label>
+                    <label>
+                        <input type="radio" name="pref-food" value="sushi">
+                        سوشی
+                    </label>
+                </div>
+                <div>
+                    <h3>تا به حال کدوم غذاهای رستوران ما رو خوردید؟</h3>
+                    <label>
+                        <input type="checkbox" name="ate-food" value="pizza">
+                        پیتزا
+                    </label>
+                    <label>
+                        <input type="checkbox" name="ate-food" value="burger">
+                        برگر
+                    </label>
+                    <label>
+                        <input type="checkbox" name="ate-food" value="sushi">
+                        سوشی
+                    </label>
+                    <label>
+                        <input type="checkbox" name="ate-food" value="fried-chicken">
+                        مرغ سوخاری
+                    </label>
+                    <label>
+                        <input type="checkbox" name="ate-food" value="soup">
+                        سوپ
+                    </label>
+                    <label>
+                        <input type="checkbox" name="ate-food" value="salad">
+                        سالاد
+                    </label>
+                </div><br>
+                <label>
+                    در کدوم شعبه ما غذا خوردید؟
+                    <select name="chain" required>
+                        <option value="" disabled selected>انتخاب کنید...</option>
+                        <option value="ferdos">فردوس</option>
+                        <option value="vanak">ونک</option>
+                        <option value="amirabad">امیرآباد</option>
+                        <option value="tehranpars">تهرانپارس</option>
+                    </select>
+                </label>
+                <label>
+                    دوست دارید چه غذایی رو به منو رستورانمون اضافه کنیم؟
+                    <input type="text" name="addfood">
+                </label><br>
+                <label>
+                    پیشنهاد و انتقاد؟
+                    <textarea name="suggestions" rows="5" placeholder="بنویسید!"></textarea>
+                </label><br>
+                <input type="submit" value="ارسال فرم">
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
