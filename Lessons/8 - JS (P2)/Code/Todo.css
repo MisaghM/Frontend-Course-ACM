@@ -1,0 +1,34 @@
+:root {
+    color-scheme: light;
+    --fg-color: black;
+    --bg-color: lightgrey;
+}
+
+[data-theme='dark'] {
+    color-scheme: dark;
+    --fg-color: white;
+    --bg-color: #303030;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    color: var(--fg-color);
+    background-color: var(--bg-color);
+}
+
+.items>h2 {
+    text-decoration: underline var(--fg-color);
+}
+
+#color-div {
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+    background-color: cyan;
+    border-radius: 4px;
+}

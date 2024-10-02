@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Flex!!!</title>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: stretch;
+            gap: 10px;
+            padding: 10px;
+            background-color: dodgerblue;
+        }
+
+        .flex-container>* {
+            width: 80px;
+            flex-basis: 33.33%;
+            text-align: center;
+            background-color: lightgreen;
+        }
+
+        /* .flex-container>div:nth-child(2) {
+            flex-basis: 200px;
+        }
+        .flex-container>div:nth-child(3) {
+            flex-shrink: 0;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div>#1</div>
+        <div>#2</div>
+        <div>#3</div>
+    </div>
+</body>
+
+</html>

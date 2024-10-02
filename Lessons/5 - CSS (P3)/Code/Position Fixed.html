@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Fixed Position</title>
+    <style>
+        div {
+            border: 2px solid black;
+            padding: 4px;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 200px;
+            background-color: rgba(150 220 240 / .5);
+        }
+
+        body {
+            height: 200vh;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Fixed Position</h1>
+    <div>Statically positioned element</div>
+    <div class="fixed">
+        This element is fixed to the viewport.
+        It stays here even after scrolling.
+    </div>
+    <div>Another normal static element.</div>
+</body>
+
+</html>

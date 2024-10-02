@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pseudo-elements</title>
+    <style>
+        ::selection,
+        ::placeholder {
+            color: rgb(200, 100, 180);
+        }
+
+        ::selection {
+            background-color: lightgrey;
+        }
+
+        input {
+            padding: 6px;
+        }
+
+        li::marker {
+            content: "X: ";
+        }
+
+        h1::before {
+            content: "[";
+            margin-right: 2px;
+        }
+
+        h1::after {
+            content: "]";
+            margin-left: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>More pseudo-elements</h1>
+    <label for="textinput">Sample:</label>
+    <input id="textinput" type="text" placeholder="This is a placeholder">
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+</body>
+
+</html>

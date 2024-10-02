@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Absolute Position</title>
+    <style>
+        div {
+            border: 2px solid black;
+            padding: 4px;
+        }
+
+        .relative {
+            position: relative;
+            width: 400px;
+            height: 200px;
+        }
+
+        .absolute {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            background-color: rgba(150 220 240 / .5);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Absolute Position</h1>
+    <div>Normal element</div>
+    <div class="relative">
+        <p>This is inside of a relatively positioned element.</p>
+        <div class="absolute">abso<br>lute</div>
+    </div>
+</body>
+
+</html>

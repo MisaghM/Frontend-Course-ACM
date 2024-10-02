@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sticky Position</title>
+    <style>
+        div {
+            border: 2px solid black;
+            padding: 4px;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 20px;
+            background-color: rgba(150 220 240 / .5);
+        }
+
+        body {
+            height: 200vh;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sticky Position</h1>
+    <div>Normal element 1.</div>
+    <div class="sticky">
+        This element is sticky and gets fixed to the viewport after scrolling.
+    </div>
+    <div>Normal element 2.</div>
+</body>
+
+</html>

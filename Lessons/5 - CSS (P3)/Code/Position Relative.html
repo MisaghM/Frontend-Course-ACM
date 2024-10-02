@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Relative Position</title>
+    <style>
+        div {
+            border: 2px solid black;
+            padding: 4px;
+        }
+
+        .relative {
+            position: relative;
+            top: 6px;
+            left: 20px;
+            background-color: rgba(150 220 240 / .5);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Relative Position</h1>
+    <div>Static positioning is the default and inset properties do not apply.</div>
+    <div class="relative">
+        Relative positioning can have offset.
+        But it does not change affect the flow.
+    </div>
+    <div>A normal static element.</div>
+</body>
+
+</html>

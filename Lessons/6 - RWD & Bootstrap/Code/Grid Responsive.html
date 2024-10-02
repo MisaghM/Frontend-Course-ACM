@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        main {
+            height: 100vh;
+            background-color: lightgrey;
+        }
+
+        .container {
+            width: 900px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template: 1fr / 1fr 1fr;
+            place-items: center;
+        }
+
+        @media (max-width: 1000px) {
+            .container {
+                width: 500px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 360px;
+            }
+
+            .grid {
+                grid-template: 1fr 1fr / 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="grid">
+                <div>
+                    <h1>Hi!</h1>
+                    <h1>Hi!</h1>
+                    <h1>Hi!</h1>
+                    <h1>Hi!</h1>
+                    <h1>Hi!</h1>
+                    <h1>Hi!</h1>
+                    <h1>Hi!</h1>
+                </div>
+                <div>
+                    <h1>Welcome!</h1>
+                    <h1>Welcome!</h1>
+                    <h1>Welcome!</h1>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

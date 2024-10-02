@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pseudo-elements</title>
+    <style>
+        #container {
+            width: 200px;
+            border: 2px dashed blue;
+            padding: 10px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        p::first-letter {
+            font-size: 1.4rem;
+            border: 1px solid black;
+        }
+
+        p::first-line {
+            text-shadow: 2px 2px 2px cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Sint hic itaque doloremque minus reiciendis dicta optio ullam eveniet eligendi quam.
+        </p>
+    </div>
+</body>
+
+</html>
